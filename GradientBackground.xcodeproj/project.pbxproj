@@ -15,6 +15,7 @@
 		2EEDC17224BF04CD00F9377B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEDC17024BF04CD00F9377B /* LaunchScreen.storyboard */; };
 		2EEDC17D24BF04CE00F9377B /* GradientBackgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEDC17C24BF04CE00F9377B /* GradientBackgroundTests.swift */; };
 		2EEDC18824BF04CE00F9377B /* GradientBackgroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEDC18724BF04CE00F9377B /* GradientBackgroundUITests.swift */; };
+		2EEDC19924BF0D4200F9377B /* GradientBKAnimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEDC19824BF0D4200F9377B /* GradientBKAnimateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2EEDC18324BF04CE00F9377B /* GradientBackgroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradientBackgroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEDC18724BF04CE00F9377B /* GradientBackgroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundUITests.swift; sourceTree = "<group>"; };
 		2EEDC18924BF04CE00F9377B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EEDC19824BF0D4200F9377B /* GradientBKAnimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBKAnimateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				2EEDC16E24BF04CD00F9377B /* Assets.xcassets */,
 				2EEDC17024BF04CD00F9377B /* LaunchScreen.storyboard */,
 				2EEDC17324BF04CD00F9377B /* Info.plist */,
+				2EEDC19824BF0D4200F9377B /* GradientBKAnimateViewController.swift */,
 			);
 			path = GradientBackground;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EEDC16A24BF04CB00F9377B /* ViewController.swift in Sources */,
+				2EEDC19924BF0D4200F9377B /* GradientBKAnimateViewController.swift in Sources */,
 				2EEDC16624BF04CB00F9377B /* AppDelegate.swift in Sources */,
 				2EEDC16824BF04CB00F9377B /* SceneDelegate.swift in Sources */,
 			);

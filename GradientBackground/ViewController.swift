@@ -8,6 +8,32 @@
 
 import UIKit
 
+
+
+extension CAGradientLayer {
+    
+    func setColors(_ newColors: [CGColor],
+                   animated: Bool = true,
+                   withDuration duration: TimeInterval = 0,
+                   timingFunctionName name: CAMediaTimingFunctionName? = nil) {
+        
+        if !animated {
+            self.colors = newColors
+            return
+        }
+        
+        let colorAnimation = CABasicAnimation(keyPath: "colors")
+        colorAnimation.fromValue = colors
+        colorAnimation.toValue = newColors
+        colorAnimation.duration = duration
+        colorAnimation.isRemovedOnCompletion = false
+        colorAnimation.fillMode = CAMediaTimingFillMode.forwards
+        colorAnimation.timingFunction = CAMediaTimingFunction(name: name ?? .linear)
+
+        add(colorAnimation, forKey: "colorsChangeAnimation")
+    }
+}
+
 class ViewController: UIViewController {
     
     func makeGradientLayer(`for` object : UIView, startPoint : CGPoint, endPoint : CGPoint, gradientColors : [Any], round:Bool) -> CAGradientLayer {
@@ -25,11 +51,14 @@ class ViewController: UIViewController {
         
         return gradient
     }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        /*
         //horizontal
         //let start : CGPoint = CGPoint(x: 0.0, y: 1.0)
         //let end : CGPoint = CGPoint(x: 1.0, y: 1.0)
@@ -57,6 +86,26 @@ class ViewController: UIViewController {
             UIColor.black.cgColor, UIColor(red: 0.007843137255, green: 0.5764705882, blue: 0.8, alpha: 1).cgColor], round: true)
 
         self.view.layer.insertSublayer(gradient, at: 0)
+        */
+        
+        let newColors = [
+            UIColor.purple.cgColor,
+            UIColor.red.cgColor,
+            UIColor.orange.cgColor
+        ]
+
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.colors = newColors
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradient.frame = CGRect(origin: CGPoint.zero, size: view.bounds.size)
+        view.layer.addSublayer(gradient)
+        
+        gradient.setColors(newColors,
+                           animated: true,
+                           withDuration: 2,
+                           timingFunctionName: .linear)
+        
     }
 
 
